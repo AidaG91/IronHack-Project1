@@ -1,3 +1,5 @@
+/* --- GENERAL FEATURES --- */
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
@@ -26,6 +28,8 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: var(--NeutralLight);
 }
+
+/* --- COMMON FEATURES --- */
 
 h1 {
   font-size: 60px;
