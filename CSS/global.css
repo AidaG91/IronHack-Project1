@@ -53,3 +53,31 @@ h4 {
   font-weight: bold;
   color: var(--NeutralDark);
 }
+
+.body-medium {
+  font-size: 24px;
+  color: var(--NeutralDark);
+}
+
+.body-regular {
+  font-size: 20px;
+  color: var(--NeutralMedium);
+}
+
+.headline-regular {
+  font-size: 17px;
+  color: var(--Primary);
+}
+
+.headline-medium {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.caption1 {
+  font-size: 15px;
+}
+
+.caption2 {
+  font-size: 13px;
+}

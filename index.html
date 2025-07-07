@@ -25,7 +25,7 @@
             <span></span>
             <span></span>
           </label>
-          <ul class="menu">
+          <ul class="menu headline-medium">
             <li><a href="#">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#services">Services</a></li>
@@ -38,17 +38,21 @@
     </header>
 
     <!--  --- HERO --- -->
-    <section>
+    <section id="hero">
       <div class="hero-left-content">
         <div>
           <h1>Empower your business with stunning design!</h1>
-          <p>
+          <p class="body-regular">
             Circle is a digital design and development studio. We design and
             develop astonishing websites and mobile apps.
           </p>
           <div>
-            <a href="#newsletter"><button>Get in touch</button></a>
-            <a href="#projects"><button>See our work</button></a>
+            <a href="#newsletter"
+              ><button class="headline-medium">Get in touch</button></a
+            >
+            <a href="#projects"
+              ><button class="headline-medium">See our work</button></a
+            >
           </div>
         </div>
       </div>
@@ -118,20 +122,111 @@
     </section>
 
     <main>
-      <!-- --- RECENT PROJECTS #projects --- -->
+      <!-- --- RECENT PROJECTS --- -->
       <section id="projects" class="recent-projects-section">
         <h3>Recent Projects</h3>
         <div class="projects-grid"></div>
       </section>
 
       <!-- --- CLIENT'S OPINION --- -->
+      <section id="testimonial" class="testimonial-section">
+        <img
+          src="/media/testimonial-section/orbit.png"
+          alt="Orbit background image"
+          class="testimonial-bg-orbit"
+        />
+
+        <img
+          src="/media/testimonial-section/memoji-1.png"
+          alt="Top Left Emoji"
+          class="emoji-top-left"
+        />
+        <img
+          src="/media/testimonial-section/memoji-2.png"
+          alt="Top Right Emoji"
+          class="emoji-top-right"
+        />
+        <img
+          src="/media/testimonial-section/memoji-3.png"
+          alt="Bottom Left Emoji"
+          class="emoji-bottom-left"
+        />
+        <img
+          src="/media/testimonial-section/memoji-4.png"
+          alt="Bottom Right Emoji"
+          class="emoji-bottom-right"
+        />
+
+        <div class="testimonial-content">
+          <h3>Hear What Our Clients Have to Say</h3>
+          <div class="testimonial-quote">
+            <p>
+              “Circle helped us through every stage of our startup. We really
+              enjoyed working with you.”
+            </p>
+          </div>
+          <div class="testimonal-author">
+            <img
+              src="./media/testimonial-section/profile.png"
+              alt="Client profile picture"
+              class="author-avatar"
+            />
+            <div>
+              <p class="author-name">Kristin Watson</p>
+              <p class="author-company caption2">Booking.com</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- --- SERVICES --- -->
+      <section id="services">
+        <h3>Our Services</h3>
+        <div class="services-container">
+          <div class="service1">
+            <img
+              src="/media/services-section/icons/1.svg"
+              alt="Icon Service 1"
+            />
+            <p class="body-medium">User Interface Design</p>
+            <p class="body-regular">
+              Circle provides you with a stunning user interface design that is
+              accessible to everyone.
+            </p>
+            <a href="#"><p class="headline-regular">Learn more</p></a>
+          </div>
+
+          <div class="service2">
+            <img
+              src="/media/services-section/icons/2.svg"
+              alt="Icon Service 2"
+            />
+            <p class="body-medium">User Experience Design</p>
+            <p class="body-regular">
+              Circle always focuses on delivering the best user experience to
+              your customers.
+            </p>
+            <a href="#"><p class="headline-regular">Learn more</p></a>
+          </div>
+
+          <div class="service3">
+            <img
+              src="/media/services-section/icons/3.svg"
+              alt="Icon Service 3"
+            />
+            <p class="body-medium">Application Development</p>
+            <p class="body-regular">
+              We develop high-quality mobile and web applications using the
+              latest technology stack.
+            </p>
+            <a href="#"><p class="headline-regular">Learn more</p></a>
+          </div>
+        </div>
+      </section>
 
       <!-- --- NEWSLETTER #newsletter --- -->
     </main>
     <!-- --- FOOTER --- -->
-
 
     <script src="./JS/script.js"></script>
   </body>
