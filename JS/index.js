@@ -1,5 +1,3 @@
-// JS/index.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const projectsGrid = document.querySelector(".projects-grid");
   const API_URL =
@@ -13,21 +11,26 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then((projects) => {
+      console.log("Datos de la API (orden original):", projects);
+
+      const projectsCopy = [...projects];
+
+      projectsCopy.reverse();
+      
+      const requiredProjects = projectsCopy.slice(0, 3);
+
       console.log(
-        "Data from API (original order, already 4, 3, 2, 1):",
-        projects
+        "Proyectos para index.html (ordenado 1, 2, 3):",
+        requiredProjects
       );
 
-      const recentProjects = projects.slice(0, 3);
-
-      console.log("Most recent projects (4, 3, 2):", recentProjects);
-
-      if (recentProjects.length === 0) {
-        projectsGrid.innerHTML = "<p>No recent projects found.</p>";
+      if (requiredProjects.length === 0) {
+        projectsGrid.innerHTML =
+          "<p>No se encontraron proyectos recientes.</p>";
         return;
       }
 
-      recentProjects.forEach((project) => {
+      requiredProjects.forEach((project) => {
         const projectCard = document.createElement("div");
         projectCard.classList.add("project-card");
 
@@ -35,15 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     <img src="${project.image}" alt="${project.name}">
                     <h4>${project.name}</h4>
                     <p>${project.description}</p>
-                    <a href="./projects.html?id=${project.uuid}" class="learn-more-btn">Learn more</a> 
+                    <a href="./projects.html?id=${project.uuid}" class="learn-more-btn">Learn more</a>
                 `;
 
         projectsGrid.appendChild(projectCard);
       });
     })
     .catch((error) => {
-      console.error("There was an issue while fetching:", error);
+      console.error("Hubo un problema al cargar los proyectos:", error);
       projectsGrid.innerHTML =
-        "<p>Error when loading the projects. Please try again later.</p>";
+        "<p>Error al cargar los proyectos. Por favor, inténtalo de nuevo más tarde.</p>";
     });
 });
