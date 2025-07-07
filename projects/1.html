@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle Agency - Project 1</title>
+    <link rel="stylesheet" href="/CSS/global.css" />
+    <link rel="stylesheet" href="/CSS/index.css">
+
+  </head>
+  <body onload="fetchProjectDetails()">
+    <header></header>
+
+    <main class="project-detail">
+      <h1 id="project-name">Cargando...</h1>
+      <img
+        id="project-image"
+        src=""
+        alt="Project Image"
+        style="max-width: 100%"
+      />
+      <p id="project-description">Cargando descripción...</p>
+      <div id="project-content">Cargando contenido...</div>
+      <p>Completed on: <span id="project-completed-on"></span></p>
+
+      <h3>Other Projects</h3>
+      <div class="other-projects-grid"></div>
+    </main>
+
+    <footer></footer>
+
+    <script>
+      // Función que se ejecutará cuando la página esté completamente cargada
+      function fetchProjectDetails() {
+        const API_URL =
+          "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"; // <--- ¡De nuevo, reemplaza con la URL real!
+
+        fetch(API_URL)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then((projects) => {
+            // Filtrar el proyecto con uuid '1'
+            const project1 = projects.find((p) => p.uuid === "1");
+
+            if (project1) {
+              document.getElementById("project-name").textContent =
+                project1.name;
+              document.getElementById("project-image").src = project1.image;
+              document.getElementById("project-description").textContent =
+                project1.description;
+              document.getElementById("project-content").innerHTML =
+                project1.content; // Usar innerHTML si content puede tener HTML
+              document.getElementById("project-completed-on").textContent =
+                new Date(project1.completed_on).toLocaleDateString();
+
+              // Ahora, para "Otros Proyectos"
+              const otherProjectsGrid = document.querySelector(
+                ".other-projects-grid"
+              );
+              const otherProjects = projects
+                .filter((p) => p.uuid !== "1")
+                .slice(0, 3); // Obtén, por ejemplo, los 3 primeros que no sean el uuid 1
+
+              otherProjects.forEach((otherProject) => {
+                const otherProjectCard = document.createElement("div");
+                otherProjectCard.classList.add("other-project-card");
+                otherProjectCard.innerHTML = `
+                                <img src="${otherProject.image}" alt="${otherProject.name}">
+                                <h4>${otherProject.name}</h4>
+                                <p>${otherProject.description}</p>
+                                <a href="projects/1.html" class="learn-more-btn">Learn more</a>  `;
+                otherProjectsGrid.appendChild(otherProjectCard);
+              });
+            } else {
+              document.getElementById("project-name").textContent =
+                "Project not found";
+              console.warn("Project with UUID '1' not found in API response.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error fetching project details:", error);
+            document.getElementById("project-name").textContent =
+              "Error loading project details.";
+          });
+      }
+    </script>
+  </body>
+</html>
