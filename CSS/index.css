@@ -97,12 +97,36 @@
   transform: translate(20%, 30%);
 }
 
+/* --- CLIENT SECTION --- */
+
+#clients {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10rem;
+  gap: 40px;
+  width: 100%;
+}
+
+.client-logos img {
+    filter: grayscale(100%);
+}
+
+.client-logos img:hover {
+    filter: none;
+}
+
+/* --- DESKTOP RESPONSIVENESS --- */
 @media (min-width: 781px) {
+  body {
+    padding: 0 170px;
+  }
   .hero {
     flex-direction: row;
-    width: 1440px;
+    width: 100%;
     height: 650px;
-    padding: 170px;
   }
 
   .hero-left-content {
@@ -137,5 +161,9 @@
   .hero-top-left {
     top: 0;
     left: 0;
+  }
+
+  #clients {
+    margin-top: 5rem;
   }
 }
