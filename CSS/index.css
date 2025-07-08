@@ -22,6 +22,33 @@
   margin-bottom: 20px;
 }
 
+.hero-left-content p {
+  margin-bottom: 30px;
+}
+
+.hero-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.inTouch-btn {
+  background-color: var(--Primary);
+  color: var(--White);
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color var(--transition-normal);
+  font-weight: bold;
+}
+
+.inTouch-btn:hover {
+  background-color: var(--Primary);
+  color: var(--Secondary1);
+  cursor: pointer;
+}
+
 .hero-right-content {
   flex: 1;
   position: relative;
@@ -78,5 +105,11 @@
   .hero-left-content {
     flex: 1;
     max-width: 50%;
+  }
+
+  .hero-btns {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 30px;
   }
 }
