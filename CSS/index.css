@@ -1,0 +1,82 @@
+/*  --- HERO SECTION --- */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+  min-height: auto;
+  gap: 30px;
+}
+
+.hero-left-content {
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-left-content h1 {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.hero-right-content {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centra la imagen principal horizontalmente */
+  align-items: center; /* Centra la imagen principal verticalmente */
+  max-width: 50%; /* Limita el ancho para que no ocupe todo el espacio */
+}
+
+.hero-bg-image {
+  max-width: 100%; /* Asegura que la imagen de fondo sea responsive */
+  height: auto;
+  display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+.hero-top-left,
+.hero-bottom-right {
+  position: absolute; /* ¡IMPORTANTE! Posicionamiento absoluto */
+  width: 30%; /* Ajusta el tamaño de las imágenes pequeñas según sea necesario */
+  height: auto;
+  z-index: 2; /* Asegura que estén por encima de la imagen de fondo */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
+  border-radius: 8px; /* Opcional: bordes redondeados para las tarjetas */
+}
+
+.hero-top-left {
+  top: 0; /* Posiciona en la parte superior */
+  left: 0; /* Posiciona a la izquierda */
+  transform: translate(
+    -20%,
+    -20%
+  ); /* Ajusta la posición para que sobresalga un poco */
+  /* Puedes usar porcentajes o valores fijos en px para 'top' y 'left' */
+}
+
+.hero-bottom-right {
+  bottom: 0; /* Posiciona en la parte inferior */
+  right: 0; /* Posiciona a la derecha */
+  transform: translate(
+    20%,
+    20%
+  ); /* Ajusta la posición para que sobresalga un poco */
+  /* Puedes usar porcentajes o valores fijos en px para 'bottom' y 'right' */
+}
+
+@media (min-width: 781px) {
+  .hero {
+    flex-direction: row;
+    width: 1440px;
+    height: 650px;
+    padding: 170px;
+  }
+
+  .hero-left-content {
+    flex: 1;
+    max-width: 50%;
+  }
+}
