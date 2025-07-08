@@ -37,7 +37,7 @@
   background-color: var(--Primary);
   color: var(--White);
   border: none;
-  padding: 8px;
+  padding: 5px 10px;
   border-radius: 8px;
   transition: background-color var(--transition-normal);
   font-weight: bold;
@@ -49,49 +49,52 @@
   cursor: pointer;
 }
 
+.work-btn {
+  border: none;
+}
+
+.work-btn:hover {
+  cursor: pointer;
+  color: var(--Primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .hero-right-content {
-  flex: 1;
+  width: 90%;
+  max-width: 400px;
   position: relative;
   display: flex;
-  justify-content: center; /* Centra la imagen principal horizontalmente */
-  align-items: center; /* Centra la imagen principal verticalmente */
-  max-width: 50%; /* Limita el ancho para que no ocupe todo el espacio */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .hero-bg-image {
-  max-width: 100%; /* Asegura que la imagen de fondo sea responsive */
+  max-width: 100%;
   height: auto;
-  display: block; /* Elimina espacio extra debajo de la imagen */
+  display: block;
 }
 
 .hero-top-left,
 .hero-bottom-right {
-  position: absolute; /* ¡IMPORTANTE! Posicionamiento absoluto */
-  width: 30%; /* Ajusta el tamaño de las imágenes pequeñas según sea necesario */
+  position: absolute;
+  width: 60%;
   height: auto;
-  z-index: 2; /* Asegura que estén por encima de la imagen de fondo */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
-  border-radius: 8px; /* Opcional: bordes redondeados para las tarjetas */
+  z-index: 2;
+  background-color: transparent;
 }
 
 .hero-top-left {
-  top: 0; /* Posiciona en la parte superior */
-  left: 0; /* Posiciona a la izquierda */
-  transform: translate(
-    -20%,
-    -20%
-  ); /* Ajusta la posición para que sobresalga un poco */
-  /* Puedes usar porcentajes o valores fijos en px para 'top' y 'left' */
+  top: 0;
+  left: 0;
+  transform: translate(-20%, -10%);
 }
 
 .hero-bottom-right {
-  bottom: 0; /* Posiciona en la parte inferior */
-  right: 0; /* Posiciona a la derecha */
-  transform: translate(
-    20%,
-    20%
-  ); /* Ajusta la posición para que sobresalga un poco */
-  /* Puedes usar porcentajes o valores fijos en px para 'bottom' y 'right' */
+  bottom: 0;
+  right: 0;
+  transform: translate(20%, 30%);
 }
 
 @media (min-width: 781px) {
@@ -107,9 +110,32 @@
     max-width: 50%;
   }
 
+  .hero-left-content p {
+    width: 435px;
+  }
+
   .hero-btns {
     flex-direction: row;
     justify-content: flex-start;
     gap: 30px;
+  }
+
+  .inTouch-btn {
+    padding: 12px 25px;
+  }
+
+  .hero-right-content {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .hero-top-left,
+  .hero-bottom-right {
+    width: 60%;
+  }
+
+  .hero-top-left {
+    top: 0;
+    left: 0;
   }
 }
