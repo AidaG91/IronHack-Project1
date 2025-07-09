@@ -206,6 +206,74 @@
   color: var(--Secondary1);
 }
 
+/* --- TESTIMONAL SECTION --- */
+
+.testimonial-section {
+  background-color: var(--NeutralDark);
+  background-image: url(/media/testimonial-section/orbit.png);
+  background-size: contain;
+  background-position: center center;
+  /* arriba to be updated */
+  position: relative;
+  overflow: hidden;
+
+  padding: 100px 20px; /* Padding para dar espacio al contenido y que el fondo se vea */
+  min-height: 600px; /* Asegura una altura mínima para que la órbita se muestre bien */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.testimonial-emojis img {
+  position: absolute;
+  background-color: transparent;
+  max-width: 75px;
+}
+.emoji-top-left {
+  top: 5%;
+  left: 5%;
+}
+
+.emoji-top-right {
+  top: 5%;
+  right: 5%;
+}
+
+.emoji-bottom-left {
+  bottom: 5%;
+  left: 5%;
+}
+
+.emoji-bottom-right {
+  bottom: 5%;
+  right: 5%;
+}
+
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--NeutralDark);
+}
+
+.testimonial-content h2 {
+  text-transform: capitalize;
+}
+
+.testimonial-content p {
+  color: var(--Secondary1);
+}
+
+.testimonal-author {
+  display: flex;
+}
+.testimonal-author img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
 /* --- TABLET RESPONSIVENESS --- */
 
 @media (min-width: 481px) and (max-width: 768px) {

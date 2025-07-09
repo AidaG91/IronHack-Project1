@@ -10,12 +10,12 @@
   <body>
     <!--  --- LOGO & NAVBAR --- -->
     <header class="header">
-      <div class="logo">
+      <article class="logo">
         <a href="./index.html"
           ><img src="./media/logos/circle.svg" alt="Logo Circle"
         /></a>
-      </div>
-      <div class="burger-menu">
+      </article>
+      <article class="burger-menu">
         <input type="checkbox" id="nav-toggle" class="nav-toggle" />
         <label for="nav-toggle" class="nav-toggle-label">
           <span></span>
@@ -32,15 +32,15 @@
             </li>
           </ul>
         </nav>
-      </div>
-      <div class="contact-button-desktop">
+      </article>
+      <article class="contact-button-desktop">
         <a href="./pages/contact.html">Contact Us</a>
-      </div>
+      </article>
     </header>
 
     <!--  --- HERO --- -->
     <section id="hero" class="hero">
-      <div class="hero-left-content">
+      <article class="hero-left-content">
         <div>
           <h1>Empower your business with stunning design!</h1>
           <p class="body-regular">
@@ -58,8 +58,8 @@
             >
           </div>
         </div>
-      </div>
-      <div class="hero-right-content">
+      </article>
+      <article class="hero-right-content">
         <img
           src="./media/hero-section/hero-image.png"
           alt="Hero Background Image"
@@ -75,51 +75,51 @@
           alt="Project accepted image"
           class="hero-bottom-right"
         />
-      </div>
+      </article>
     </section>
 
     <!-- --- CLIENT SECTION --- -->
     <section id="clients" class="client-logos">
-      <div class="client-single-logo airbnb-logo">
+      <article class="client-single-logo airbnb-logo">
         <a
           href="https://www.airbnb.com/"
           target="_blank"
           rel="noopener noreferrer"
           ><img src="./media/logos/airbnb-logo.svg" alt="AirBnB logo"
         /></a>
-      </div>
-      <div class="client-single-logo google-logo">
+      </article>
+      <article class="client-single-logo google-logo">
         <a
           href="https://www.google.com/"
           target="_blank"
           rel="noopener noreferrer"
           ><img src="./media/logos/google-logo.svg" alt="Google logo"
         /></a>
-      </div>
-      <div class="client-single-logo microsoft-logo">
+      </article>
+      <article class="client-single-logo microsoft-logo">
         <a
           href="https://www.microsoft.com/es-es/"
           target="_blank"
           rel="noopener noreferrer"
           ><img src="./media/logos/microsoft-logo.svg" alt="Microsoft logo"
         /></a>
-      </div>
-      <div class="client-single-logo fedex-logo">
+      </article>
+      <article class="client-single-logo fedex-logo">
         <a
           href="https://www.fedex.com/"
           target="_blank"
           rel="noopener noreferrer"
           ><img src="./media/logos/fedex-logo.svg" alt="Fedex logo"
         /></a>
-      </div>
-      <div class="client-single-logo amazon-logo">
+      </article>
+      <article class="client-single-logo amazon-logo">
         <a
           href="https://www.amazon.com/"
           target="_blank"
           rel="noopener noreferrer"
           ><img src="./media/logos/amazon-logo.svg" alt="Amazon logo"
         /></a>
-      </div>
+      </article>
     </section>
 
     <main>
@@ -131,53 +131,49 @@
 
       <!-- --- CLIENT'S OPINION --- -->
       <section id="testimonial" class="testimonial-section">
-        <img
-          src="./media/testimonial-section/orbit.png"
-          alt="Orbit background image"
-          class="testimonial-bg-orbit"
-        />
+        <article class="testimonial-emojis">
+          <img
+            src="./media/testimonial-section/memoji-1.png"
+            alt="Top Left Emoji"
+            class="emoji-top-left"
+          />
+          <img
+            src="./media/testimonial-section/memoji-2.png"
+            alt="Top Right Emoji"
+            class="emoji-top-right"
+          />
+          <img
+            src="./media/testimonial-section/memoji-3.png"
+            alt="Bottom Left Emoji"
+            class="emoji-bottom-left"
+          />
+          <img
+            src="./media/testimonial-section/memoji-4.png"
+            alt="Bottom Right Emoji"
+            class="emoji-bottom-right"
+          />
+        </article>
 
-        <img
-          src="./media/testimonial-section/memoji-1.png"
-          alt="Top Left Emoji"
-          class="emoji-top-left"
-        />
-        <img
-          src="./media/testimonial-section/memoji-2.png"
-          alt="Top Right Emoji"
-          class="emoji-top-right"
-        />
-        <img
-          src="./media/testimonial-section/memoji-3.png"
-          alt="Bottom Left Emoji"
-          class="emoji-bottom-left"
-        />
-        <img
-          src="./media/testimonial-section/memoji-4.png"
-          alt="Bottom Right Emoji"
-          class="emoji-bottom-right"
-        />
-
-        <div class="testimonial-content">
+        <article class="testimonial-content">
           <h2>Hear What Our Clients Have to Say</h2>
-          <div class="testimonial-quote">
-            <p>
-              “Circle helped us through every stage of our startup. We really
-              enjoyed working with you.”
-            </p>
+          <p class="testimonial-quote">
+            “Circle helped us through every stage of our startup. We really
+            enjoyed working with you.”
+          </p>
+        </article>
+
+        <article class="testimonal-author">
+          <img
+            src="./media/testimonial-section/profile.png"
+            alt="Client profile picture"
+            class="author-avatar"
+          />
+
+          <div>
+            <p class="author-name">Kristin Watson</p>
+            <p class="author-company caption2">Booking.com</p>
           </div>
-          <div class="testimonal-author">
-            <img
-              src="./media/testimonial-section/profile.png"
-              alt="Client profile picture"
-              class="author-avatar"
-            />
-            <div>
-              <p class="author-name">Kristin Watson</p>
-              <p class="author-company caption2">Booking.com</p>
-            </div>
-          </div>
-        </div>
+        </article>
       </section>
 
       <!-- --- SERVICES --- -->
@@ -246,7 +242,9 @@
               required
             />
 
-            <a href="./pages/contact.html" class="btn btn-subscribe">Subscribe</a>
+            <a href="./pages/contact.html" class="btn btn-subscribe"
+              >Subscribe</a
+            >
           </div>
         </form>
       </section>
