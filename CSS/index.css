@@ -97,19 +97,52 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   margin-bottom: 10rem;
   gap: 40px;
   width: 100%;
+  margin-inline: auto;
 }
 
+.client-single-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .client-logos img {
   filter: grayscale(100%);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .client-logos img:hover {
   filter: none;
+}
+
+
+
+/* --- TABLET RESPONSIVENESS --- */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #clients {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-auto-rows: auto;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .client-single-logo:nth-child(4) {
+    grid-column: 1;
+  }
+  .client-single-logo:nth-child(5) {
+    grid-column: 3;
+  }
 }
 
 /* --- DESKTOP RESPONSIVENESS --- */
@@ -161,5 +194,6 @@
 
   #clients {
     margin-top: 5rem;
+    justify-content: space-evenly;
   }
 }
