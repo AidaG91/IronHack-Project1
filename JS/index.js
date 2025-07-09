@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="card-content"> 
                 <h3>${project.name}</h3>
                 <p>${project.description}</p>
-                <a href="./project-details.html?id=${project.uuid}" class="card-link">Learn more</a>
+                <a href="./pages/projects.html?id=${project.uuid}" class="card-link">Learn more</a>
             </div>
         `;
 

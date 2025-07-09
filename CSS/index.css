@@ -125,9 +125,8 @@
 /* --- RECENT PROJECTS --- */
 
 .recent-projects-section {
-  padding: 80px 20px 10rem 20px; 
+  padding: 80px 20px 10rem 20px;
   text-align: left;
-  margin-bottom: 10rem;
 }
 
 .recent-projects-section h2 {
@@ -142,16 +141,24 @@
   margin: 0 auto;
 }
 
-.project-card {
+.card-content,
+.project-card h3,
+.project-card p {
   background-color: var(--White);
+}
+
+.project-card {
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: left;
   display: flex;
   flex-direction: column;
+
+  width: 90%;
   max-width: 350px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+
+  overflow: hidden;
 }
 
 .project-card img {
@@ -160,10 +167,10 @@
   object-fit: cover;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  display: block;
 }
 
 .project-card .card-content {
-  background-color: var(--White);
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -174,12 +181,10 @@
 .project-card h3 {
   margin-bottom: 10px;
   color: var(--NeutralDark);
-  background-color: var(--White);
 }
 
 .project-card p {
   color: var(--NeutralMedium);
-  background-color: var(--White);
   margin-bottom: 20px;
 }
 
@@ -221,13 +226,12 @@
     grid-column: 3;
   }
 
-     .projects-grid {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-    .project-card {
-        max-width: none;
-        margin: 0;
-    }
+  .project-card {
+    max-width: none;
+  }
+  .project-card img {
+    height: 300px;
+  }
 }
 
 /* --- DESKTOP RESPONSIVENESS --- */
@@ -283,16 +287,29 @@
   }
 
   .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    margin: 0;
+    width: 95%;
   }
 
+  .project-card {
+    max-width: none;
+  }
+  .project-card img {
+    height: 200px;
+  }
   .project-card {
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform var(--transition-normal),
       box-shadow var(--transition-normal);
   }
-
+  .project-card .card-content {
+    padding: 10px;
+  }
   .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
