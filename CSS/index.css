@@ -211,14 +211,15 @@
 .testimonial-section {
   background-color: var(--NeutralDark);
   background-image: url(/media/testimonial-section/orbit.png);
-  background-size: contain;
-  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center center; */
   /* arriba to be updated */
   position: relative;
   overflow: hidden;
 
   padding: 100px 20px; /* Padding para dar espacio al contenido y que el fondo se vea */
-  min-height: 600px; /* Asegura una altura mínima para que la órbita se muestre bien */
+  /* min-height: 600px; Asegura una altura mínima para que la órbita se muestre bien */
 
   display: flex;
   justify-content: center;
@@ -231,6 +232,7 @@
   background-color: transparent;
   max-width: 75px;
 }
+
 .emoji-top-left {
   top: 5%;
   left: 5%;
@@ -255,23 +257,49 @@
   display: flex;
   flex-direction: column;
   background-color: var(--NeutralDark);
+  margin: 20px;
+  text-align: center;
 }
 
 .testimonial-content h2 {
   text-transform: capitalize;
+  color: var(--White);
+  background-color: var(--NeutralDark);
+  margin-bottom: 30px;
 }
 
 .testimonial-content p {
   color: var(--Secondary1);
+  background-color: var(--NeutralDark);
 }
 
 .testimonal-author {
   display: flex;
+  align-items: center;
+  max-width: 200px;
+  background-color: var(--NeutralDark);
+  gap: 20px;
 }
+
 .testimonal-author img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+}
+
+.testimonial-author-info,
+.testimonial-author-info p.author-name,
+.testimonial-author-info p.author-company {
+  background-color: var(--NeutralDark);
+  text-align: left;
+}
+
+.testimonial-author-info p.author-name {
+  color: var(--PrimaryHover);
+}
+
+.testimonial-author-info p.author-company {
+  color: var(--NeutralLight);
 }
 
 /* --- TABLET RESPONSIVENESS --- */
@@ -381,5 +409,9 @@
   .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .testimonial-content p {
+  font-size: 24px;
   }
 }
