@@ -11,22 +11,21 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then((projects) => {
-      console.log("Datos de la API (orden original):", projects);
+      console.log("Data from API (original order):", projects);
 
       const projectsCopy = [...projects];
 
       projectsCopy.reverse();
-      
+
       const requiredProjects = projectsCopy.slice(0, 3);
 
       console.log(
-        "Proyectos para index.html (ordenado 1, 2, 3):",
+        "Projects for index.html (order: 1, 2, 3):",
         requiredProjects
       );
 
       if (requiredProjects.length === 0) {
-        projectsGrid.innerHTML =
-          "<p>No se encontraron proyectos recientes.</p>";
+        projectsGrid.innerHTML = "<p>Recent projects were not found.</p>";
         return;
       }
 
@@ -35,18 +34,20 @@ document.addEventListener("DOMContentLoaded", () => {
         projectCard.classList.add("project-card");
 
         projectCard.innerHTML = `
-                    <img src="${project.image}" alt="${project.name}">
-                    <h4>${project.name}</h4>
-                    <p>${project.description}</p>
-                    <a href="./projects.html?id=${project.uuid}" class="learn-more-btn">Learn more</a>
-                `;
+            <img src="${project.image}" alt="${project.name} project image">
+            <div class="card-content"> 
+                <h3>${project.name}</h3>
+                <p>${project.description}</p>
+                <a href="./project-details.html?id=${project.uuid}" class="card-link">Learn more</a>
+            </div>
+        `;
 
         projectsGrid.appendChild(projectCard);
       });
     })
     .catch((error) => {
-      console.error("Hubo un problema al cargar los proyectos:", error);
+      console.error("There was an issue while loading th eprojects:", error);
       projectsGrid.innerHTML =
-        "<p>Error al cargar los proyectos. Por favor, inténtalo de nuevo más tarde.</p>";
+        "<p>Error when loading the projects. Please, try again later.</p>";
     });
 });
