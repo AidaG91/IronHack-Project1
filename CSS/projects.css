@@ -1,14 +1,48 @@
 /* --- MAIN PROJECT --- */
 
 .project-details-main {
-  padding: 0 20px 8rem 20px;
+  padding: 20px 40px 40px 40px;
   text-align: left;
 }
 
+.project-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-block: 15px;
+}
+
+#date-of-completion,
+.project-info h3,
+.project-info p {
+  color: var(--NeutralMedium);
+  font-size: 12px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.project-info p {
+  color: var(--NeutralDark);
+}
+
 .project-details-main img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.project-description-text {
+  color: var(--NeutralMedium);
+  margin-block: 15px;
+  text-align: justify;
+  font-size: 11px;
+}
+
+/* --- OTHER PROJECTS --- */
+.other-projects-section {
+  padding: 20px 40px 40px 40px;
+  text-align: left;
 }
 
 .project-card {
@@ -20,7 +54,7 @@
 
   width: 90%;
   max-width: 350px;
-  margin: auto;
+  margin: 15px auto;
 
   overflow: hidden;
 }
@@ -36,7 +70,7 @@
 
 .project-card .card-content {
   background-color: var(--White);
-  padding: 25px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
