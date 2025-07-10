@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
       showError(
         messageInput,
         messageError,
-        "The message should have at least 5 characters."
+        "Your message should have at least 5 characters."
       );
       return false;
     } else {
@@ -173,13 +173,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const isMessageValid = validateMessage();
 
     if (isFullNameValid && isEmailValid && isPhoneValid && isMessageValid) {
-      console.log("¡Formulario enviado con éxito!");
       form.reset();
       fields.forEach((field) => resetBorder(field.input));
 
       showSuccessModal(
-        "Received",
-        "Thank you for reaching out. Your message has been submitted successfully."
+        "Sent",
+        "Thank you for reaching out to Circle. Your message has been successfully submitted."
       );
     }
   });
