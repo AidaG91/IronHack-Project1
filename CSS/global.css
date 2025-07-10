@@ -259,7 +259,7 @@ h4 {
   }
 
   .nav-toggle-label span {
-    background-color: var(--NeutralMedium);
+    background-color: var(--Primary);
     height: 2px;
     width: 100%;
     display: block;
@@ -317,6 +317,7 @@ h4 {
 
   #nav-toggle:checked + .nav-toggle-label + .nav {
     display: block;
+    background-color: var(--NeutralLight);
   }
 
   .nav ul {
@@ -481,7 +482,27 @@ h4 {
 
 @media (min-width: 769px) {
   #footer {
-    padding: 30px 170px 100px 170px;
-    display: row;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .footer-left {
+    text-align: left;
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer-menu li {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 32%;
+    height: 60px;
+    margin-bottom: 2%;
   }
 }

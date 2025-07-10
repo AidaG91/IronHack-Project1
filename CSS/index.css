@@ -99,7 +99,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   gap: 40px;
   width: 100%;
   margin-inline: auto;
@@ -165,7 +165,7 @@
 }
 
 .project-card .card-content {
-   background-color: var(--White);
+  background-color: var(--White);
   padding: 25px;
   display: flex;
   flex-direction: column;
