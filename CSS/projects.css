@@ -36,7 +36,7 @@
   color: var(--NeutralMedium);
   margin-block: 15px;
   text-align: justify;
-  font-size: 11px;
+  font-size: 1rem;
 }
 
 /* --- OTHER PROJECTS --- */
@@ -106,6 +106,13 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+  #date-of-completion,
+  .project-info h3,
+  .project-info p,
+  .project-description-text {
+    font-size: 1.125rem;
+  }
+
   .project-card {
     max-width: none;
   }
@@ -115,6 +122,12 @@
 }
 
 @media (min-width: 769px) {
+  #date-of-completion,
+  .project-info h3,
+  .project-info p,
+  .project-description-text {
+    font-size: 1.25rem;
+  }
   .project-card {
     max-width: none;
   }
