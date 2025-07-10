@@ -13,7 +13,7 @@
   --NeutralMedium: #6b708d;
   --NeutralDark: #292e47;
   --NeutralLightBlue: #ecf7ff;
-  --Wrong: #b33a3a;
+  --Wrong: #c22a2a;
   --Right: #28a428;
   --White: #fff;
   --Black: #000;
@@ -30,6 +30,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.4;
+  max-width: 1200px;
 }
 
 body {
@@ -399,7 +400,7 @@ h4 {
 
 .envelope-icon {
   position: absolute;
-  left: 10px; /* Ajusta este valor para mover el icono a la derecha */
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
@@ -409,7 +410,7 @@ h4 {
 
 .form-email-input {
   flex-grow: 1;
-  padding: 10px 10px 10px 40px; /* Ajusta el padding izquierdo para dejar espacio al icono */
+  padding: 10px 10px 10px 40px; 
   border: none;
   border-radius: 8px;
   outline: none;
