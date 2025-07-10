@@ -160,6 +160,10 @@ h4 {
   .caption2 {
     font-size: 0.8125rem;
   }
+
+  body {
+    margin: 0 250px;
+  }
 }
 
 /* --- NAVBAR --- */
