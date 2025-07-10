@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("project-headline").textContent =
           mainProject.description;
         document.getElementById("project-img").src = mainProject.image;
+        document.getElementById("project-img").alt = mainProject.name;
         document.getElementById("project-content").innerHTML =
           mainProject.content;
         document.getElementById("date-of-completion").textContent = new Date(
@@ -61,10 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
             otherProjectCard.classList.add("project-card");
             otherProjectCard.innerHTML = `
                             <img src="${otherProject.image}" alt="${otherProject.name}">
-                            <h4>${otherProject.name}</h4>
+                             <div class="card-content">
+                            <h3>${otherProject.name}</h3>
                             <p>${otherProject.description}</p>
-                            <a href="./projects.html?id=${otherProject.uuid}" class="learn-more-btn">Learn more</a> 
-                        `;
+                            <a href="./projects.html?id=${otherProject.uuid}" class="learn-more-btn">Learn more</a>
+                          </div>
+            `;
             otherProjectsGrid.appendChild(otherProjectCard);
           });
         }

@@ -172,11 +172,7 @@ textarea.input-invalid {
 
 /* --- DESKTOP --- */
 @media (min-width: 769px) {
-  .contact-section {
-    margin: 80px 170px;
-  }
-
-  .btn-submit:hover {
+   .btn-submit:hover {
     transform: translateY(-2px); /* Slight lift effect on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
