@@ -28,11 +28,13 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  background-color: var(--NeutralLight);
   font-size: 16px;
   line-height: 1.4;
 }
 
+body {
+  background-color: var(--NeutralLight);
+}
 /* --- COMMON FEATURES --- */
 
 h1 {
@@ -105,24 +107,24 @@ h4 {
   }
 
   h3 {
-    font-size: 1.875rem; 
+    font-size: 1.875rem;
   }
 
   h4 {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
 
   .body-medium {
-    font-size: 1.25rem; /
+    font-size: 1.25rem;
   }
 
   .body-regular {
-    font-size: 1.125rem; 
+    font-size: 1.125rem;
   }
 }
 
 @media (min-width: 769px) {
-   h1 {
+  h1 {
     font-size: 3.75rem;
   }
 
@@ -131,7 +133,7 @@ h4 {
   }
 
   h3 {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
   }
 
   h4 {
@@ -139,7 +141,7 @@ h4 {
   }
 
   .body-medium {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
 
   .body-regular {
@@ -148,11 +150,11 @@ h4 {
 
   .headline-regular,
   .headline-medium {
-    font-size: 1.0625rem; 
+    font-size: 1.0625rem;
   }
 
   .caption1 {
-    font-size: 0.9375rem; 
+    font-size: 0.9375rem;
   }
 
   .caption2 {
@@ -359,5 +361,73 @@ h4 {
 }
 
 /* --- NEWSLETTER --- */
+
+#newsletter {
+  background-color: var(--Secondary1);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+#newsletter h4 {
+  font-weight: normal;
+  font-size: 1rem;
+  margin-block: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-input {
+  position: relative;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.envelope-icon {
+  position: absolute;
+  left: 10px; /* Ajusta este valor para mover el icono a la derecha */
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+
+.form-email-input {
+  flex-grow: 1;
+  padding: 10px 10px 10px 40px; /* Ajusta el padding izquierdo para dejar espacio al icono */
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  height: 40px; /* Asegura una altura consistente */
+}
+
+.form-email-input:focus {
+  border: 2px solid var(--Primary);
+}
+
+.btn-subscribe {
+  background-color: var(--Primary);
+  color: var(--White);
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color var(--transition-normal);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.btn-subscribe:hover {
+  color: var(--Secondary1);
+}
 
 /* --- FOOTER --- */

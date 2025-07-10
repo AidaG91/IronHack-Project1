@@ -141,12 +141,6 @@
   margin: 0 auto;
 }
 
-.card-content,
-.project-card h3,
-.project-card p {
-  background-color: var(--White);
-}
-
 .project-card {
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -171,6 +165,7 @@
 }
 
 .project-card .card-content {
+   background-color: var(--White);
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -262,20 +257,17 @@
 .testimonial-content h2 {
   text-transform: capitalize;
   color: var(--White);
-  background-color: var(--NeutralDark);
   margin-bottom: 30px;
 }
 
 .testimonial-content p {
   color: var(--Secondary1);
-  background-color: var(--NeutralDark);
 }
 
 .testimonal-author {
   display: flex;
   align-items: center;
   max-width: 200px;
-  background-color: var(--NeutralDark);
   gap: 20px;
 }
 
@@ -283,13 +275,6 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-}
-
-.testimonial-author-info,
-.testimonial-author-info p.author-name,
-.testimonial-author-info p.author-company {
-  background-color: var(--NeutralDark);
-  text-align: left;
 }
 
 .testimonial-author-info p.author-name {
@@ -354,7 +339,6 @@
 
 .services-container h4,
 .services-container p {
-  background-color: var(--White);
   padding-block: 10px;
 }
 
