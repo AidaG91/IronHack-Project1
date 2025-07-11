@@ -28,16 +28,32 @@ This is my first fully responsive website, created as part of the **IronHack Web
 - **Git & GitHub**: Version control and repository management.
 - **Netlify**: Static site deployment.
 - **Figma**: Interpreting and replicating provided design files.
+- AI assistance used during development: **Gemini** and **GitHub Copilot**
 
 ---
 
 ## 📐 Site Structure & Features
 
-### 🧱 Website Pages
+### 🧱 Website Structure
 
-- **Home** (`index.html`): Introduction, client section, recent projects, testimonials, and services.
-- **Projects** (`projects/1.html`): Dynamically generated content from an API.
-- **Contact** (`contact.html`): Interactive form with custom validation.
+```
+📦IronHack-Project1
+┣ 📂CSS
+┃ ┣ 📜contact.css
+┃ ┣ 📜global.css
+┃ ┣ 📜index.css
+┃ ┗ 📜projects.css
+┣ 📂JS
+┃ ┣ 📜contact.js
+┃ ┣ 📜index.js
+┃ ┗ 📜projects.js
+┣ 📂media
+┣ 📂pages
+┃ ┣ 📜contact.html
+┃ ┗ 📜projects.html
+┣ 📜index.html
+┗ 📜README.md
+```
 
 ### 📱 Responsive Design
 
@@ -71,42 +87,8 @@ This is my first fully responsive website, created as part of the **IronHack Web
 
 ---
 
-## 🧭 Project Structure
-
-📦IronHack-Project1
-┣ 📂CSS
-┃ ┣ 📜contact.css
-┃ ┣ 📜global.css
-┃ ┣ 📜index.css
-┃ ┗ 📜projects.css
-┣ 📂JS
-┃ ┣ 📜contact.js
-┃ ┣ 📜index.js
-┃ ┗ 📜projects.js
-┣ 📂media
-┣ 📂pages
-┃ ┣ 📜contact.html
-┃ ┗ 📜projects.html
-┣ 📜index.html
-┗ 📜README.md
-
----
-
-## ✨ Bonus Features & Improvements
-
-- Custom 404 page (optional)
-- Emoji graphics placed with absolute positioning
-- Random fallback project selection from the API (bonus logic)
-- Clean, readable code following **DRY** and **KISS** principles
-- AI assistance used during development: **Gemini** and **GitHub Copilot**
-
----
-
 ## 👩‍💻 About the Author
 
-**Aïda** — currently learning web development through the **IronHack Bootcamp**.  
-Background in **English Studies**, **Translation** and **Audiovisual Localization**, with experience in **Project Management**. Now transitioning into tech with a focus on building clean, accessible, and responsive websites.
+This is **Aïda** behind the screen! 👋
 
-> _"You cannot be Ironhack, because I am Ironhack."_ 🦾
-
----
+I started learning programming about a month ago (to be precise, on June 4th) because I’m seeking a change in my career path. I'm currently learning web development through the **IronHack Bootcamp**, but I have a background in **English Studies**, **Translation** and **Audiovisual Localization**, with experience in **Project Management**. Now transitioning into tech with a focus on building clean, accessible, and responsive websites.
