@@ -173,7 +173,7 @@ textarea.input-invalid {
 /* --- DESKTOP --- */
 @media (min-width: 769px) {
    .btn-submit:hover {
-    transform: translateY(-2px); /* Slight lift effect on hover */
+    transform: translateY(-2px); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 }

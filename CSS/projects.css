@@ -41,8 +41,20 @@
 
 /* --- OTHER PROJECTS --- */
 .other-projects-section {
-  padding: 20px 40px 40px 40px;
+  padding: 0 20px 8rem 20px;
   text-align: left;
+}
+
+.other-projects-section h2 {
+  margin-bottom: 40px;
+}
+
+.other-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .project-card {
@@ -54,7 +66,7 @@
 
   width: 90%;
   max-width: 350px;
-  margin: 15px auto;
+  margin: auto;
 
   overflow: hidden;
 }
@@ -140,6 +152,19 @@
     transition: transform var(--transition-normal),
       box-shadow var(--transition-normal);
   }
+  .other-projects-section {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .other-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    justify-items: center;
+  }
+
   .project-card .card-content {
     padding: 10px;
   }
