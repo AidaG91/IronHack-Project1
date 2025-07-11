@@ -172,7 +172,18 @@ textarea.input-invalid {
 }
 
 /* --- DESKTOP --- */
-@media (min-width: 769px) {
+@media (min-width: 1200px) {
+  .contact-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .contact-section h2 {
+    margin-bottom: 40px;
+  }
+
   .contact-form {
     max-width: 800px;
     margin: 0 auto;

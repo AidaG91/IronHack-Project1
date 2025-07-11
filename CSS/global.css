@@ -98,7 +98,7 @@ h4 {
   line-height: 1.3;
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 1199px) {
   h1 {
     font-size: 2.75rem;
   }
@@ -124,7 +124,7 @@ h4 {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1200px) {
   h1 {
     font-size: 3.75rem;
   }
@@ -216,7 +216,7 @@ h4 {
   color: var(--Secondary1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
   .header {
     display: flex;
     flex-direction: row;
@@ -347,7 +347,7 @@ h4 {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1200px) {
   .nav-toggle {
     display: none;
   }
@@ -495,7 +495,7 @@ h4 {
   bottom: 15px;
   right: 15px;
   cursor: pointer;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .scroll-to-top-btn:hover {
@@ -503,7 +503,7 @@ h4 {
 }
 
 /* --- DESKTOP RESPONSIVENESS --- */
-@media (min-width: 769px) {
+@media (min-width: 1200px) {
   #footer {
     flex-direction: row;
     align-items: center;

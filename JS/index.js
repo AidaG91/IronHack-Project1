@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         projectCard.innerHTML = `
             <img src="${project.image}" alt="${project.name} project image">
             <div class="card-content"> 
-                <h3>${project.name}</h3>
+                <h4>${project.name}</h4>
                 <p>${project.description}</p>
                 <a href="./pages/projects.html?id=${project.uuid}" class="card-link">Learn more</a>
             </div>

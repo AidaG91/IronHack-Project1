@@ -174,7 +174,7 @@
   flex-grow: 1;
 }
 
-.project-card h3 {
+.project-card h4 {
   margin-bottom: 10px;
   color: var(--NeutralDark);
 }
@@ -288,12 +288,12 @@
 
 /* --- SERVICES --- */
 #services {
-  padding: 0 20px;
+  padding: 0 20px 8rem 20px;
   margin-bottom: 5rem;
 }
 
 #services h2 {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .services-grid-wrapper {
@@ -305,20 +305,6 @@
   margin: 0 auto;
   justify-items: center;
   padding: 0 10px;
-}
-
-.services-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: var(--White);
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px 25px;
-  text-align: left;
-  max-width: 350px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .service-img {
@@ -340,9 +326,30 @@
   object-fit: contain;
 }
 
-.services-container h4,
-.services-container p {
+.services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--White);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 25px;
+  text-align: left;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-container h4 {
   padding-block: 10px;
+  margin-bottom: 10px;
+  min-height: 2.5em;
+}
+
+.services-container p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  padding-block: 0;
 }
 
 .services-container a {
@@ -371,7 +378,7 @@
 
 /* --- TABLET RESPONSIVENESS --- */
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 1199px) {
   #clients {
     gap: 30px;
     display: grid;
@@ -393,12 +400,12 @@
     max-width: none;
   }
   .project-card img {
-    height: 300px;
+    height: 250px;
   }
 }
 
 /* --- DESKTOP RESPONSIVENESS --- */
-@media (min-width: 769px) {
+@media (min-width: 1200px) {
   .hero {
     display: flex;
     flex-direction: row;
@@ -446,24 +453,26 @@
     justify-content: space-evenly;
   }
 
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-items: center;
-  }
-
   .recent-projects-section {
     width: 90%;
     margin: 0 auto;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    justify-items: center;
+    grid-auto-rows: 1fr;
   }
 
   .project-card {
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
+    align-self: stretch;
     transition: transform var(--transition-normal),
       box-shadow var(--transition-normal);
   }
@@ -473,7 +482,7 @@
   }
 
   .project-card .card-content {
-    padding: 10px;
+    padding: 20px 25px;
   }
 
   .project-card:hover {
@@ -488,15 +497,28 @@
     font-size: 24px;
   }
 
+  #services {
+    width: 90%;
+    margin: 0 auto;
+  }
+
   .services-grid-wrapper {
     grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    justify-items: center;
+    padding: 0 10px;
+    grid-auto-rows: 1fr;
   }
 
   .services-container {
     padding: 20px 25px;
-  }
-
-  .services-container {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: stretch;
     transition: transform var(--transition-normal),
       box-shadow var(--transition-normal);
   }
