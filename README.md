@@ -4,12 +4,6 @@ This is my first fully responsive website, created as part of the **IronHack Web
 
 ---
 
-## 📸 Live Preview
-
-![Circle Agency Preview](path/to/your/screenshot.png)
-
----
-
 ## 🔗 Project Links
 
 - 🚀 **Live Website**: [https://circleagency-ironhack.netlify.app/](https://circleagency-ironhack.netlify.app/)
