@@ -12,9 +12,9 @@ This is my first fully responsive website, created as part of the **IronHack Web
 
 ## 🔗 Project Links
 
-- 🚀 **Live Website**: [https://circle-agency.netlify.app](https://circle-agency.netlify.app)
-- 💻 **GitHub Repository**: [https://github.com/your-username/circle-agency](https://github.com/your-username/circle-agency)
-- 📊 **Presentation Slides**: [https://your-slides-link.com](https://your-slides-link.com)
+- 🚀 **Live Website**: [https://circleagency-ironhack.netlify.app/](https://circleagency-ironhack.netlify.app/)
+- 💻 **GitHub Repository**: [https://github.com/AidaG91/IronHack-Project1](https://github.com/AidaG91/IronHack-Project1)
+- 📊 **Presentation Slides**: [https://1drv.ms/p/c/821ca9991a95443d/Ea0zX56Za2FMsmlq23X2GwcBeYa-IEExbdU-EgvtSyFZeA?e=Fjh3vR](https://1drv.ms/p/c/821ca9991a95443d/Ea0zX56Za2FMsmlq23X2GwcBeYa-IEExbdU-EgvtSyFZeA?e=Fjh3vR)
 - 📚 **DeepWiki Entry**: [https://deepwiki.com/AidaG91/IronHack-Project1](https://deepwiki.com/AidaG91/IronHack-Project1)
 
 ---
@@ -44,16 +44,16 @@ This is my first fully responsive website, created as part of the **IronHack Web
 - Fully responsive layout from mobile to large desktop screens.
 - Built with **mobile-first** principles.
 - Media queries, flexbox, grid, and absolute positioning for optimal design across devices.
-- **Responsive hamburger menu** implemented in JavaScript.
+- **Responsive hamburger menu** implemented.
 
 ### ⚙️ JavaScript Functionality
 
 - **Form validation**:
   - All fields required.
-  - Custom validation: If the user enters `"ironhack"` as a name, an alert is triggered ("You cannot be Ironhack, because I am Ironhack").
+  - Custom validation: If the user enters no input or invalid input in the form, they will get an error message.
 - **API integration**:
   - Fetches the latest 3 projects dynamically (in reverse order).
-  - Project details (for uuid = 1) rendered in `projects/1.html`.
+  - Project details (for uuid = 1) rendered in `projects.html`.
   - Alert shown if project is not found (bonus logic included).
 - **Dynamic UI elements**:
   - Hover states, interactivity, conditional rendering.
@@ -73,14 +73,22 @@ This is my first fully responsive website, created as part of the **IronHack Web
 
 ## 🧭 Project Structure
 
-📁 circle-agency/
-├── 📁 assets/ → Images, logos, icons
-├── 📁 css/ → Stylesheets (style.css)
-├── 📁 js/ → JavaScript logic (main.js, form-validation.js)
-├── 📁 projects/ → Individual project page (1.html)
-├── index.html
-├── contact.html
-└── README.md
+📦IronHack-Project1
+┣ 📂CSS
+┃ ┣ 📜contact.css
+┃ ┣ 📜global.css
+┃ ┣ 📜index.css
+┃ ┗ 📜projects.css
+┣ 📂JS
+┃ ┣ 📜contact.js
+┃ ┣ 📜index.js
+┃ ┗ 📜projects.js
+┣ 📂media
+┣ 📂pages
+┃ ┣ 📜contact.html
+┃ ┗ 📜projects.html
+┣ 📜index.html
+┗ 📜README.md
 
 ---
 
